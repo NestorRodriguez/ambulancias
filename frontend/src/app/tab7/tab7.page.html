@@ -1,9 +1,59 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>tab7</ion-title>
+      <ion-title>
+          
+      </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list lines="none">
+  <section style="text-align: center;">
+      <h1><b>Cargar<br>Inventario Móvil</b></h1>
+  </section><br>
+      <ion-item>
+        <ion-input style="text-align: right;" placeholder="#Orden 001"></ion-input>
+            <ion-label position="stacked">
+              Seleccionar Producto
+              <ion-text color="danger">*</ion-text>
+            </ion-label>
+            <ion-select interface="popover">
+                <ion-select-option value="snes">Producto1</ion-select-option>
+                <ion-select-option value="snes">Producto2</ion-select-option>
+            </ion-select>
+        </ion-item><br>
+        <ion-item>
+          <ion-label position="stacked">
+              Registro INVIMA
+              <ion-text color="danger">*</ion-text>
+          </ion-label>
+          <ion-input color="primary" required type="text" oninput="handleFirstNameValue(event)">
+          </ion-input>
+        </ion-item><br>
+        <ion-item>
+            <ion-label position="stacked">
+                Cantidad
+                <ion-text color="danger">*</ion-text>
+            </ion-label><br>
+            <ion-item style="max-width: 100px;">
+            <ion-input style="background-color:rgba(223, 219, 219, 0.966)" required type="text" oninput="handleFirstNameValue(event)">
+            </ion-input></ion-item>
+        </ion-item><br>
+        <section style="text-align: center;">
+                <h3>Fechas</h3>
+        </section>
+        <ion-item>
+            <ion-label>Elaboración</ion-label>
+            <ion-datetime value="2019-11-05" placeholder="Select Date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+                <ion-label>Vencimiento</ion-label>
+                <ion-datetime value="2019-11-05" placeholder="Select Date"></ion-datetime>
+            </ion-item><br><br><br>
+      <section style="text-align: center;">
+        <ion-card routerLink="/tab5">
+            <ion-button>REGRESAR</ion-button><ion-button>ENVIAR</ion-button>
+        </ion-card>
+      </section>
+  </ion-list>
 </ion-content>

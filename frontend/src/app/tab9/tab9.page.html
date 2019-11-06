@@ -1,9 +1,91 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>tab9</ion-title>
+      <ion-title>
+          
+      </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-
-</ion-content>
+<ion-app>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>List</ion-title>
+        </ion-toolbar>
+      </ion-header>
+  
+      <ion-content fullscreen>
+        <ion-list>
+          <ion-list-header>
+            <h1><b>Solicitudes</b></h1><br><br><br><br><br><br>
+          </ion-list-header>
+  
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="./assets/cv-salud/hospital.jpg">
+            </ion-avatar>
+            <ion-label>
+              <h2><b>#Orden 001</b></h2>
+              <h3>Usuario 1</h3>
+              <p>15 days ago</p>
+            </ion-label>
+              <ion-select interface="popover">
+                <ion-select-option value="nes">Aprobado</ion-select-option>
+                <ion-select-option value="n64">Pendiente</ion-select-option>
+                <ion-select-option value="ps">Rechazado</ion-select-option>
+              </ion-select>
+          </ion-item>
+  
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="./assets/cv-salud/eps.png">
+            </ion-avatar>
+            <ion-label>
+              <h2><b>#Orden 002</b></h2>
+              <h3>Usuario 2</h3>
+              <p>8 days ago</p>
+            </ion-label>
+            <ion-select interface="popover">
+                  <ion-select-option value="nes">Aprobado</ion-select-option>
+                  <ion-select-option value="n64">Pendiente</ion-select-option>
+                  <ion-select-option value="ps">Rechazado</ion-select-option>
+                </ion-select>
+          </ion-item>
+  
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="./assets/cv-salud/hospital.jpg">
+            </ion-avatar>
+            <ion-label>
+              <h2><b>#Orden 003</b></h2>
+              <h3>Usuario 1</h3>
+              <p>2 days ago</p>
+            </ion-label>
+            <ion-select interface="popover">
+                  <ion-select-option value="nes">Aprobado</ion-select-option>
+                  <ion-select-option value="n64">Pendiente</ion-select-option>
+                  <ion-select-option value="ps">Rechazado</ion-select-option>
+                </ion-select>
+          </ion-item>
+  
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="./assets/cv-salud/eps.png">
+            </ion-avatar>
+            <ion-label>
+              <h2><b>#Orden 004</b></h2>
+              <h3>Usuario 1</h3>
+              <p>5 hours ago</p>
+            </ion-label>
+            <ion-select interface="popover">
+                  <ion-select-option value="nes">Aprobado</ion-select-option>
+                  <ion-select-option value="n64">Pendiente</ion-select-option>
+                  <ion-select-option value="ps">Rechazado</ion-select-option>
+                </ion-select>
+          </ion-item>
+        </ion-list><br>
+        <section style="text-align: center;">
+          <ion-card fullscreen class="ion-padding">
+            <ion-button expand="block" (click)="presentLoading()">ENVIAR</ion-button>
+          </ion-card>
+        </section>
+      </ion-content>
+</ion-app>
