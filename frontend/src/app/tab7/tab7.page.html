@@ -16,8 +16,8 @@
             <ion-label position="stacked">
               Seleccionar Producto
               <ion-text color="danger">*</ion-text>
-            </ion-label>
-            <ion-select interface="popover">
+            </ion-label><br>
+            <ion-select style="background-color:rgba(223, 219, 219, 0.966)" interface="popover">
                 <ion-select-option value="snes">Producto1</ion-select-option>
                 <ion-select-option value="snes">Producto2</ion-select-option>
             </ion-select>
@@ -26,9 +26,11 @@
           <ion-label position="stacked">
               Registro INVIMA
               <ion-text color="danger">*</ion-text>
-          </ion-label>
-          <ion-input color="primary" required type="text" oninput="handleFirstNameValue(event)">
-          </ion-input>
+          </ion-label><br>
+        <ion-item style="max-width: 400px;">
+            <ion-input style="background-color:rgba(223, 219, 219, 0.966)" required type="text" oninput="handleFirstNameValue(event)">
+            </ion-input>
+        </ion-item>
         </ion-item><br>
         <ion-item>
             <ion-label position="stacked">
@@ -38,7 +40,7 @@
             <ion-item style="max-width: 100px;">
             <ion-input style="background-color:rgba(223, 219, 219, 0.966)" required type="text" oninput="handleFirstNameValue(event)">
             </ion-input></ion-item>
-        </ion-item><br>
+        </ion-item>
         <section style="text-align: center;">
                 <h3>Fechas</h3>
         </section>
@@ -49,7 +51,7 @@
         <ion-item>
                 <ion-label>Vencimiento</ion-label>
                 <ion-datetime value="2019-11-05" placeholder="Select Date"></ion-datetime>
-            </ion-item><br><br><br>
+            </ion-item><br>
       <section style="text-align: center;">
         <ion-card routerLink="/tab5">
             <ion-button>REGRESAR</ion-button><ion-button>ENVIAR</ion-button>
