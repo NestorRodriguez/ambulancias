@@ -11,19 +11,22 @@
   <section style="text-align: center;">
       <h1><b>Cargar<br>Inventario Móvil</b></h1>
   </section><br>
-      <ion-item>
-        <ion-input style="text-align: right;" placeholder="#Orden 001"></ion-input>
-            <ion-label position="stacked">
+    <ion-item>
+        <ion-input style="text-align: right" placeholder="#Orden 001"></ion-input><br>
+    </ion-item>
+        <ion-item>
+            <ion-label position="floating">
               Seleccionar Producto
               <ion-text color="danger">*</ion-text>
             </ion-label><br>
-            <ion-select style="background-color:rgba(223, 219, 219, 0.966)" interface="popover">
-                <ion-select-option value="snes">Producto1</ion-select-option>
-                <ion-select-option value="snes">Producto2</ion-select-option>
-            </ion-select>
+            <ion-item style="max-width: 1400px;">
+                <ion-select style="width: 700px; background-color:rgba(223, 219, 219, 0.966)" interface="popover">
+                    <ion-select-option value="snes">Producto1</ion-select-option>
+                    <ion-select-option value="snes">Producto2</ion-select-option>
+            </ion-select></ion-item>
         </ion-item><br>
         <ion-item>
-          <ion-label position="stacked">
+          <ion-label position="floating">
               Registro INVIMA
               <ion-text color="danger">*</ion-text>
           </ion-label><br>
@@ -33,12 +36,12 @@
         </ion-item>
         </ion-item><br>
         <ion-item>
-            <ion-label position="stacked">
+            <ion-label position="floating">
                 Cantidad
                 <ion-text color="danger">*</ion-text>
             </ion-label><br>
             <ion-item style="max-width: 100px;">
-            <ion-input style="background-color:rgba(223, 219, 219, 0.966)" required type="text" oninput="handleFirstNameValue(event)">
+            <ion-input style="background-color:rgba(223, 219, 219, 0.966)" required type="number" oninput="handleFirstNameValue(event)">
             </ion-input></ion-item>
         </ion-item>
         <section style="text-align: center;">

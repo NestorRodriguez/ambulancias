@@ -6,56 +6,102 @@
     </ion-toolbar>
   </ion-header>
   
-  <ion-content>
-    <ion-list lines="none">
+<ion-content>
+    
     <section style="text-align: center;">
-        <h1><b>Cargar<br>Inventario Móvil</b></h1>
-    </section><br>
-        <ion-item>
-          <ion-input style="text-align: right;" placeholder="#Orden 001"></ion-input>
-              <ion-label position="stacked">
-                Seleccionar Producto
-                <ion-text color="danger">*</ion-text>
-              </ion-label><br>
-              <ion-select style="background-color:rgba(223, 219, 219, 0.966)" interface="popover">
-                  <ion-select-option value="snes">Producto1</ion-select-option>
-                  <ion-select-option value="snes">Producto2</ion-select-option>
-              </ion-select>
-          </ion-item><br>
-          <ion-item>
-            <ion-label position="stacked">
-                Registro INVIMA
-                <ion-text color="danger">*</ion-text>
-            </ion-label><br>
-          <ion-item style="max-width: 400px;">
-              <ion-input style="background-color:rgba(223, 219, 219, 0.966)" required type="text" oninput="handleFirstNameValue(event)">
-              </ion-input>
-          </ion-item>
-          </ion-item><br>
-          <ion-item>
-              <ion-label position="stacked">
-                  Cantidad
-                  <ion-text color="danger">*</ion-text>
-              </ion-label><br>
-              <ion-item style="max-width: 100px;">
-              <ion-input style="background-color:rgba(223, 219, 219, 0.966)" required type="text" oninput="handleFirstNameValue(event)">
-              </ion-input></ion-item>
-          </ion-item>
-          <section style="text-align: center;">
-                  <h3>Fechas</h3>
-          </section>
-          <ion-item>
-              <ion-label>Elaboración</ion-label>
-              <ion-datetime value="2019-11-05" placeholder="Select Date"></ion-datetime>
-          </ion-item>
-          <ion-item>
-                  <ion-label>Vencimiento</ion-label>
-                  <ion-datetime value="2019-11-05" placeholder="Select Date"></ion-datetime>
-              </ion-item><br>
+        <h1><b>Registro Paciente</b></h1>
+    </section>
+    <ion-list lines="none">
+        <ion-item lines="none">
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-item>
+                            <ion-label position="stacked"><b>Nombres Completos</b>
+                                <ion-text color="danger">*</ion-text>
+                            </ion-label>
+                            <ion-input required type="text"></ion-input>
+                        </ion-item>
+                    </ion-col>                   
+                </ion-row><br>
+                <ion-row>
+                    <ion-col size="5">
+                        <ion-item>
+                            <ion-label position="stacked"><b>Tipo ID</b>
+                                <ion-text color="danger">*</ion-text>
+                            </ion-label>
+                            <ion-input>
+                                <ion-select interface="popover">
+                                    <ion-select-option value="TI">TI</ion-select-option>
+                                    <ion-select-option value="CC">CC</ion-select-option>
+                                    <ion-select-option value="CE">CE</ion-select-option>
+                                    <ion-select-option value="NIT">NIT</ion-select-option>
+                                </ion-select>
+                            </ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col size="7">
+                        <ion-item>
+                                <ion-label position="stacked"><b>Número de documento</b>
+                                    <ion-text color="danger">*</ion-text>
+                                </ion-label>
+                            <ion-input required type="number"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row><br>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-item>
+                            <ion-label position="stacked"><b>Diagnóstico</b>
+                                <ion-text color="danger">*</ion-text>
+                            </ion-label><br>
+                            <ion-textarea required type="text">
+                            </ion-textarea>
+                        </ion-item>
+                    </ion-col>                   
+                </ion-row><br>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-item>
+                            <ion-label position="stacked"><b>Registro Insumo</b>
+                                <ion-text color="danger">*</ion-text>
+                            </ion-label>
+                            <ion-row>
+                                <ion-col size="6">
+                                    <ion-input>
+                                        <ion-select interface="popover">
+                                            <ion-select-option value="P1">Producto 1</ion-select-option>
+                                            <ion-select-option value="p2">Producto 2</ion-select-option>
+                                            <ion-select-option value="p3">Producto 3</ion-select-option>
+                                        </ion-select>
+                                    </ion-input>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <ion-input>
+                                        <ion-select interface="popover">
+                                            <ion-select-option value="1">1</ion-select-option>
+                                            <ion-select-option value="2">2</ion-select-option>
+                                            <ion-select-option value="3">3</ion-select-option>
+                                            <ion-select-option value="4">4</ion-select-option>
+                                            <ion-select-option value="5">5</ion-select-option>
+                                            <ion-select-option value="6">6</ion-select-option>
+                                            <ion-select-option value="7">7</ion-select-option>
+                                            <ion-select-option value="8">8</ion-select-option>                                    <ion-select-option value="1">1</ion-select-option>
+                                            <ion-select-option value="9">9</ion-select-option>
+                                            <ion-select-option value="10">10</ion-select-option>
+                                        </ion-select>
+                                    </ion-input>
+                                </ion-col>
+                            </ion-row>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
         <section style="text-align: center;">
-          <ion-card routerLink="/tab5">
-              <ion-button>REGRESAR</ion-button><ion-button>ENVIAR</ion-button>
-          </ion-card>
+            <ion-card routerLink="/tab5">
+                <ion-button>REGRESAR</ion-button><ion-button>ENVIAR</ion-button>
+            </ion-card>
         </section>
     </ion-list>
-  </ion-content>
+</ion-content>
