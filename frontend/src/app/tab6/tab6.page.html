@@ -31,7 +31,7 @@
                                 <ion-text color="danger">*</ion-text>
                             </ion-label>
                             <ion-input>
-                                <ion-select interface="popover">
+                                <ion-select interface="popover" placeholder="ID">
                                     <ion-select-option value="TI">TI</ion-select-option>
                                     <ion-select-option value="CC">CC</ion-select-option>
                                     <ion-select-option value="CE">CE</ion-select-option>
@@ -91,6 +91,35 @@
                                             <ion-select-option value="10">10</ion-select-option>
                                         </ion-select>
                                     </ion-input>
+                                </ion-col>
+                                <ion-col size="2">
+                                    <ion-input>
+                                        <ion-fab horizontal="end" vertical="center" slot="fixed">
+                                            <ion-fab-button size="small" color="primary">
+                                                <ion-icon name="add"></ion-icon>
+                                            </ion-fab-button>
+                                        </ion-fab>
+                                    </ion-input>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col size="3" class="ion-text-center" *ngIf="model.ubicacion">
+                                    <ion-button color="light" size="large" shape="round">
+                                        <ion-icon slot="icon-only" color="primary" name="checkmark"></ion-icon>
+                                    </ion-button>
+                                </ion-col>
+                                <ion-col size="{{(model.ubicacion) ? 8 : 12}}" class="ion-text-end">
+                                    <ion-button color="light" size="large" shape="round" expand="block" (click)="loadModalMap()">
+                                        <ion-icon slot="icon-only" color="primary" name="pin"></ion-icon>
+                                    </ion-button>
+                                </ion-col>
+                                <ion-col size="3" class="ion-text-center" *ngIf="model.imagen">
+                                    <ion-img [src]="model.imagen"></ion-img>
+                                </ion-col>
+                                <ion-col size="{{(model.imagen) ? 8 : 12}}" class="ion-text-end">
+                                    <ion-button color="light" size="large" shape="round" expand="block" (click)="loadCamera()">
+                                        <ion-icon slot="icon-only" color="primary" name="camera"></ion-icon>
+                                    </ion-button>
                                 </ion-col>
                             </ion-row>
                         </ion-item>
