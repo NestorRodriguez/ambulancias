@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NetworkInterface} from '@ionic-native/network-interface/ngx';
 import {Camera, CameraOptions} from '@ionic-native/camera/ngx';
 
+
 @Component({
   selector: 'app-tab6',
   templateUrl: './tab6.page.html',

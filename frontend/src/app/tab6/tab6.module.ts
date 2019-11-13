@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
@@ -32,5 +32,4 @@ const searchbar = document.querySelector('ion-searchbar');
   declarations: [Tab6Page]
 })
 export class Tab6PageModule {}
-
 
