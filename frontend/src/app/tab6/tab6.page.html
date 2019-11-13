@@ -67,30 +67,11 @@
                                 <ion-text color="danger">*</ion-text>
                             </ion-label>
                             <ion-row>
-                                <ion-col size="6">
-                                    <ion-input>
-                                        <ion-select interface="popover">
-                                            <ion-select-option value="P1">Producto 1</ion-select-option>
-                                            <ion-select-option value="p2">Producto 2</ion-select-option>
-                                            <ion-select-option value="p3">Producto 3</ion-select-option>
-                                        </ion-select>
-                                    </ion-input>
+                                <ion-col size="8">
+                                    <ion-searchbar></ion-searchbar>
                                 </ion-col>
-                                <ion-col size="4">
-                                    <ion-input>
-                                        <ion-select interface="popover">
-                                            <ion-select-option value="1">1</ion-select-option>
-                                            <ion-select-option value="2">2</ion-select-option>
-                                            <ion-select-option value="3">3</ion-select-option>
-                                            <ion-select-option value="4">4</ion-select-option>
-                                            <ion-select-option value="5">5</ion-select-option>
-                                            <ion-select-option value="6">6</ion-select-option>
-                                            <ion-select-option value="7">7</ion-select-option>
-                                            <ion-select-option value="8">8</ion-select-option>                                    <ion-select-option value="1">1</ion-select-option>
-                                            <ion-select-option value="9">9</ion-select-option>
-                                            <ion-select-option value="10">10</ion-select-option>
-                                        </ion-select>
-                                    </ion-input>
+                                <ion-col size="2" lines="none">
+                                    <ion-input required type="number"></ion-input>
                                 </ion-col>
                                 <ion-col size="2">
                                     <ion-input>
@@ -103,16 +84,6 @@
                                 </ion-col>
                             </ion-row>
                             <ion-row>
-                                <ion-col size="3" class="ion-text-center" *ngIf="model.ubicacion">
-                                    <ion-button color="light" size="large" shape="round">
-                                        <ion-icon slot="icon-only" color="primary" name="checkmark"></ion-icon>
-                                    </ion-button>
-                                </ion-col>
-                                <ion-col size="{{(model.ubicacion) ? 8 : 12}}" class="ion-text-end">
-                                    <ion-button color="light" size="large" shape="round" expand="block" (click)="loadModalMap()">
-                                        <ion-icon slot="icon-only" color="primary" name="pin"></ion-icon>
-                                    </ion-button>
-                                </ion-col>
                                 <ion-col size="3" class="ion-text-center" *ngIf="model.imagen">
                                     <ion-img [src]="model.imagen"></ion-img>
                                 </ion-col>

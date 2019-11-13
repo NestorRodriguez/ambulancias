@@ -15,6 +15,8 @@ const routes: Routes = [
   }
 ];
 
+const searchbar = document.querySelector('ion-searchbar');
+
 @NgModule({
   imports: [
     CommonModule,
