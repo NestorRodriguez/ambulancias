@@ -9,7 +9,7 @@
 <ion-content>
     
     <section style="text-align: center;">
-        <h1><b>Registro Paciente</b></h1>
+        <br><h1><b>Registro Paciente</b></h1>
     </section>
     <ion-list lines="none">
         <ion-item lines="none">
@@ -59,46 +59,51 @@
                             </ion-textarea>
                         </ion-item>
                     </ion-col>                   
-                </ion-row><br>
+                </ion-row>
+            <!--<section style="text-align: center;">
+                REGISTRO PRODUCTOS
+            </section>-->
                 <ion-row>
-                    <ion-col size="12">
+                    <ion-col size="6">
                         <ion-item>
-                            <ion-label position="stacked"><b>Registro Insumo</b>
+                            <ion-label position="stacked"><b>Nombre</b>
                                 <ion-text color="danger">*</ion-text>
                             </ion-label>
-                            <ion-row>
-                                <ion-col size="8">
-                                    <ion-searchbar></ion-searchbar>
-                                </ion-col>
-                                <ion-col size="2" lines="none">
-                                    <ion-input required type="number"></ion-input>
-                                </ion-col>
-                                <ion-col size="2">
-                                    <ion-input>
-                                        <ion-fab horizontal="end" vertical="center" slot="fixed">
-                                            <ion-fab-button size="small" color="primary">
-                                                <ion-icon name="add"></ion-icon>
-                                            </ion-fab-button>
-                                        </ion-fab>
-                                    </ion-input>
-                                </ion-col>
-                            </ion-row>
-                            <ion-row>
-                                <ion-col size="3" class="ion-text-center" *ngIf="model.imagen">
-                                    <ion-img [src]="model.imagen"></ion-img>
-                                </ion-col>
-                                <ion-col size="{{(model.imagen) ? 8 : 12}}" class="ion-text-end">
-                                    <ion-button color="light" size="large" shape="round" expand="block" (click)="loadCamera()">
-                                        <ion-icon slot="icon-only" color="primary" name="camera"></ion-icon>
-                                    </ion-button>
-                                </ion-col>
-                            </ion-row>
+                            <ion-input required type="text"></ion-input>
+                        </ion-item>
+                        <!--<ion-searchbar></ion-searchbar>-->
+                    </ion-col>
+                    <ion-col size="4" lines="none">
+                        <ion-item>
+                            <ion-label position="stacked"><b>Cantidad</b>
+                                <ion-text color="danger">*</ion-text>
+                            </ion-label>
+                            <ion-input required type="number"></ion-input>
                         </ion-item>
                     </ion-col>
-                </ion-row>
+                    <ion-col size="2">
+                        <ion-input>
+                            <ion-fab horizontal="end" vertical="center" slot="fixed">
+                                <ion-fab-button size="small" color="primary">
+                                    <ion-icon name="add"></ion-icon>
+                                </ion-fab-button>
+                            </ion-fab>
+                        </ion-input>
+                    </ion-col>
+                </ion-row><br><br>
+                <ion-row>
+                    <ion-col size="3" class="ion-text-center" *ngIf="model.imagen">
+                        <ion-img [src]="model.imagen"></ion-img>
+                    </ion-col>
+                    <ion-col size="{{(model.imagen) ? 8 : 12}}" class="ion-text-end">
+                        <ion-button color="light" size="large" shape="round" expand="block" (click)="loadCamera()">
+                            <ion-icon slot="icon-only" color="primary" name="camera"></ion-icon>
+                        </ion-button>
+                    </ion-col>
+                </ion-row><br><br>
             </ion-grid>
         </ion-item>
-        <section style="text-align: center;" routerLink="/tab5">
+        <section style="text-align: center;" routerLink="/tabs/tab2">
             <ion-button>REGRESAR</ion-button><ion-button>ENVIAR</ion-button>
         </section>
     </ion-list>
