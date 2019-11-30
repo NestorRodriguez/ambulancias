@@ -2676,6 +2676,16 @@ app.get('/Estado-Solic', (req, res) => {
     });
 });
 
+
+/***************************************************
+ * Fin servicio app_salud   *
+ **************************************************/
+
+/***************************************************
+ * Ambulancias   *
+ **************************************************/
+
+
 //Inicio de servidor NodeJS
 app.listen(PORT, function() {
     console.log(`Server running at port ${PORT}`);
