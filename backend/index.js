@@ -19,7 +19,7 @@ app.use(bodyParser.json({ extended: true, limit: '10mb' }));
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "12345",
+    password: "",
     database: "ambulancias",
     port: 3306,
     multipleStatements: true
@@ -2677,13 +2677,51 @@ app.get('/Estado-Solic', (req, res) => {
 });
 
 
+
 /***************************************************
  * Fin servicio app_salud   *
  **************************************************/
 
 /***************************************************
- * Ambulancias   *
+ * app_ambulancias   *
  **************************************************/
+
+ /*********************
+ * tabla rol   *
+ *********************/
+
+app.route('/amb_rol')
+    .get((req, res) => {
+        console.log('Consultar datos ');
+        const query = db.query('select * from amb_rol', (error, result) => {
+            try {
+                if (error) {
+                    throw error;
+                } else {
+                    console.log(result);
+                    res.json(result)
+                }
+            } catch (error) {
+                res.json({ error: error.message })
+            }
+        });
+    })
+
+app.post('/amb_rol', (req, res) => {
+    const data = req.body;
+    const sql = `
+    INSERT INTO amb_rol (
+        namerol
+    ) VALUES (
+        '${data.namerol}'
+    )`;
+
+    db.query(sql, (error, result) => {
+        if (error) {
+            res.json({
+                error: true,
+                message: "Ocurrió un error al guardar el formulario"
+            });
 
 
 //Inicio de servidor NodeJS
