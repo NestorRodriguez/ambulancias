@@ -3,16 +3,17 @@ create database ambulancias;
 use ambulancias;
 
 /*Código que deben correr en workbeanch 8*/
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '12345';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';
 
 /*Crear tabla rol*/
-create table rol (
-	id int not null primary key auto_increment,
+create table amb_rol (
+	id INT(11) not null primary key auto_increment,
     namerol varchar(20) not null
     );
-insert into rol (namerol) values ('administrador');
-insert into rol (namerol) values ('farmaceuta');
-insert into rol (namerol) values ('usuario');
+select * from amb_rol;
+insert into amb_rol (namerol) values ('administrador');
+insert into amb_rol (namerol) values ('farmaceuta');
+insert into amb_rol (namerol) values ('usuario');
 
 /*Crear usuarios*/
 CREATE TABLE users (
@@ -21,8 +22,7 @@ CREATE TABLE users (
   `password` VARCHAR(20) NOT NULL,
   `id_rol` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `id_rol` (`id_rol` ASC) VISIBLE,
-  FOREIGN KEY (`id_rol`) REFERENCES `ambulancias`.`rol` (`id`))
+  FOREIGN KEY (`id_rol`) REFERENCES `ambulancias`.`amb_rol` (`id`))
 ENGINE = InnoDB;
 select * from users;
 insert into users (nameuser, password, id_rol) values ('administrador', '1234', 1);
