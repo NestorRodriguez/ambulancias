@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS `ambulancias`.`registro_paciente` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+insert into registro_paciente (nombre, documento, tipo_identificacion, diagnostico, users_id) values ('nom_prueba', 'doc_prueba', 'CC', 'diag_prueba', 1);
 
 CREATE TABLE IF NOT EXISTS `ambulancias`.`producto` (
   `idinventario` INT(11) NOT NULL AUTO_INCREMENT,
@@ -55,6 +56,7 @@ CREATE TABLE IF NOT EXISTS `ambulancias`.`producto` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+insert into producto (nombre, elaboracion, vencimiento, invima, cantidad) values ('nom_prueba', '2019-12-02', '2021-12-02', 'inv_prueba', 1);
 
 CREATE TABLE IF NOT EXISTS `ambulancias`.`producto_has_registro_paciente` (
   `producto_idinventario` INT(11) NOT NULL,

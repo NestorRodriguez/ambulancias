@@ -39,23 +39,6 @@ app.get('/', function(req, res) {
     res.send("Bienvenidos al servidor <strong> TuMap </strong>");
 });
 
-//Manejo de Rutas Select users
-app.route('/users')
-    .get((req, res) => {
-        console.log('Consultar datos ');
-        const query = db.query('select * from users', (error, result) => {
-            try {
-                if (error) {
-                    throw error;
-                } else {
-                    console.log(result);
-                    res.json(result)
-                }
-            } catch (error) {
-                res.json({ error: error.message })
-            }
-        });
-    })
 
 //Manejo de Rutas Select users por id
 app.route('/users/:id')
@@ -78,26 +61,6 @@ app.route('/users/:id')
     })
 
 //Agregar Usuarios
-app.route('/users')
-    .post((req, res) => {
-        const dato = {
-            name: req.body.name,
-            lastname: req.body.lastname,
-            identification_card: req.body.identification_card,
-            email: req.body.email,
-            Rol_idRol: req.body.Rol_idRol,
-        };
-
-        const sql = `INSERT INTO users SET name='${dato.name}', lastname='${dato.lastname}', identification_card='${dato.identification_card}', email='${dato.email}', Rol_idRol='${dato.Rol_idRol}'`;
-
-        db.query(sql, (error, result) => {
-            if (error) {
-                res.json({ error: error })
-            } else {
-                res.json(result)
-            }
-        });
-    })
 
 //Actualizar Usuarios
 app.route('/users/:id')
@@ -2677,35 +2640,74 @@ app.get('/Estado-Solic', (req, res) => {
 });
 
 
-
 /***************************************************
  * Fin servicio app_salud   *
  **************************************************/
 
 /***************************************************
- * app_ambulancias   *
+ * ambulancias   *
  **************************************************/
 
- /*********************
- * tabla rol   *
- *********************/
+ /***************************
+ * tabla users   *
+ ****************************/
+app.get('/users', (req, res) => {
+    const sql = 'SELECT * FROM users';
+    db.query(sql, (error, result) => {
+        if (error) {
+            res.json({
+                error: true,
+                message: "Ocurrió un error al consultar el estado"
+            });
+        } else {
+            res.json(result);
+        }
+    });
+});
 
-app.route('/amb_rol')
-    .get((req, res) => {
-        console.log('Consultar datos ');
-        const query = db.query('select * from amb_rol', (error, result) => {
-            try {
-                if (error) {
-                    throw error;
-                } else {
-                    console.log(result);
-                    res.json(result)
-                }
-            } catch (error) {
-                res.json({ error: error.message })
-            }
-        });
-    })
+app.post('/users', (req, res) => {
+    const data = req.body;
+    const sql = `
+    INSERT INTO users (
+        nameuser,
+        password,
+        id_rol
+    ) VALUES (
+        '${data.nameuser}',
+        '${data.password}',
+        ${data.id_rol}
+    )`;
+
+    db.query(sql, (error, result) => {
+        if (error) {
+            res.json({
+                error: true,
+                message: "Ocurrió un error al guardar el formulario"
+            });
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+
+ /***************************
+ * tabla amb_rol   *
+ ****************************/
+
+app.get('/amb_rol', (req, res) => {
+    const sql = 'SELECT * FROM amb_rol';
+    db.query(sql, (error, result) => {
+        if (error) {
+            res.json({
+                error: true,
+                message: "Ocurrió un error al consultar el estado"
+            });
+        } else {
+            res.json(result);
+        }
+    });
+});
 
 app.post('/amb_rol', (req, res) => {
     const data = req.body;
@@ -2722,6 +2724,105 @@ app.post('/amb_rol', (req, res) => {
                 error: true,
                 message: "Ocurrió un error al guardar el formulario"
             });
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+ /***************************
+ * tabla amb_rol   *
+ ****************************/
+
+app.get('/registro_paciente', (req, res) => {
+    const sql = 'SELECT * FROM registro_paciente';
+    db.query(sql, (error, result) => {
+        if (error) {
+            res.json({
+                error: true,
+                message: "Ocurrió un error al consultar el estado"
+            });
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+app.post('/registro_paciente', (req, res) => {
+    const data = req.body;
+    const sql = `
+    INSERT INTO registro_paciente (
+        nombre,
+        documento,
+        tipo_identificacion,
+        diagnostico,
+        users_id
+    ) VALUES (
+        '${data.nombre}',
+        '${data.documento}',
+        '${data.tipo_identificacion}',
+        '${data.diagnostico}',
+        '${data.users_id}'
+    )`;
+
+    db.query(sql, (error, result) => {
+        if (error) {
+            res.json({
+                error: true,
+                message: "Ocurrió un error al guardar el formulario"
+            });
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+ /***************************
+ * tabla producto   *
+ ****************************/
+
+app.get('/producto', (req, res) => {
+    const sql = 'SELECT * FROM producto';
+    db.query(sql, (error, result) => {
+        if (error) {
+            res.json({
+                error: true,
+                message: "Ocurrió un error al consultar el estado"
+            });
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+app.post('/producto', (req, res) => {
+    const data = req.body;
+    const sql = `
+    INSERT INTO producto (
+        nombre,
+        elaboracion,
+        vencimiento,
+        invima,
+        cantidad
+    ) VALUES (
+        '${data.nombre}',
+        '${data.elaboracion}',
+        '${data.vencimiento}',
+        '${data.invima}',
+        '${data.cantidad}'
+    )`;
+
+    db.query(sql, (error, result) => {
+        if (error) {
+            res.json({
+                error: true,
+                message: "Ocurrió un error al guardar el formulario"
+            });
+        } else {
+            res.json(result);
+        }
+    });
+});
 
 
 //Inicio de servidor NodeJS
