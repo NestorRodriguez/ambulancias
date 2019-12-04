@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
+import { PacienteService } from '../services/paciente.service';
+
 import {NetworkInterface} from '@ionic-native/network-interface/ngx';
 import {Camera, CameraOptions} from '@ionic-native/camera/ngx';
 
@@ -13,7 +16,8 @@ export class Tab6Page implements OnInit {
   model: any = {};
 
   constructor(  private networkInterface: NetworkInterface,
-                private camera: Camera) {
+                private camera: Camera,
+                private getPaciente: PacienteService) {
 
                   this.networkInterface.getWiFiIPAddress()
                       .then(address => {
@@ -30,7 +34,15 @@ export class Tab6Page implements OnInit {
                       .catch(error => console.error(`Unable to get IP: ${error}`));
                 }
 
+                paciente: any[] = [];
+                errorMessage = '';
+
   ngOnInit() {
+    this.getPaciente.getPaciente().subscribe( paciente => {
+      this.paciente = paciente;
+      }, error => this.errorMessage = error
+      );
+        
   }
 
 }
