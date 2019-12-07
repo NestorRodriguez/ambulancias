@@ -1,89 +1,247 @@
 <ion-header>
-  <ion-toolbar>
+    <ion-toolbar style="--ion-background-color: #2C689F; color: white;">
+      <ion-buttons slot="start">
+        <ion-button routerLink="/tab4" routerDirection="forward">
+          <ion-icon slot="icon-only" name="arrow-round-back"> </ion-icon>
+        </ion-button>
+      </ion-buttons>
       <ion-title>
           
       </ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-app>
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>List</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <ion-buttons slot="secondary">
+        <ion-button disabled>
+          <ion-icon slot="icon-only" name=""> </ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content fullscreen>
+    <section style="text-align: center;">
+      <ion-text color="primary">
+        <br><h1><b>Inventario General</b></h1><br>
+      </ion-text>
+    </section>
+    <ion-searchbar></ion-searchbar>
+    <ion-list>
+      <ion-item><ion-label>Acetaminofén x 150 mgs/5cc Frasco suspensión</ion-label><ion-badge slot="end">1</ion-badge></ion-item>
+      <ion-item><ion-label>Acetaminofén x 500 mg Tabletas</ion-label><ion-badge slot="end">50</ion-badge></ion-item>
+      <ion-item><ion-label>Acetato de aluminio loción Loción frasco</ion-label><ion-badge slot="end">1</ion-badge></ion-item>
+      <ion-item><ion-label>Acido Acetilsalicílico x 100 mg Tabletas</ion-label><ion-badge slot="end">100</ion-badge></ion-item>
+      <ion-item><ion-label>Acido Acetilsalicílico x 500 mg Tabletas</ion-label><ion-badge slot="end">50</ion-badge></ion-item>
+      <ion-item><ion-label>Adaptador tipo racord</ion-label><ion-badge slot="end">2</ion-badge></ion-item>
+      <ion-item><ion-label>Adrenalina x 1 mg Ampolla</ion-label><ion-badge slot="end">10</ion-badge></ion-item>
+      <ion-item><ion-label>Agua esteril</ion-label><ion-badge slot="end">2</ion-badge></ion-item>
+      <ion-item><ion-label>Agua para consumo humano Garrafa en litros</ion-label><ion-badge slot="end">5</ion-badge></ion-item>
+      <ion-item><ion-label>Alcohol botella x 750CC</ion-label><ion-badge slot="end">2</ion-badge></ion-item>
+      <ion-item><ion-label>Algodón</ion-label><ion-badge slot="end">1</ion-badge></ion-item>
+      <ion-item><ion-label>Amiodarona x 300 mgs Ampollas</ion-label><ion-badge slot="end">5</ion-badge></ion-item>
+      <ion-item><ion-label>Anestésico oftálmico Frasco gotero</ion-label><ion-badge slot="end">1</ion-badge></ion-item>
+      <ion-item><ion-label>Aplicadores paquete</ion-label><ion-badge slot="end">1</ion-badge></ion-item>
+      <ion-item><ion-label>Apósitos de gasas x 50 Paquetes</ion-label><ion-badge slot="end">6</ion-badge></ion-item>
+      <ion-item><ion-label>Aspirador de secrecxiones electrico con dispositivos para succion de repuesto (cauchos de succion/latex)</ion-label><ion-badge slot="end">1</ion-badge></ion-item>
+      <ion-item><ion-label>Atril portasuero de dos ganchos</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Atril portasuero Unidad</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Atropina x 1 mg Ampolla</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Bajalenguas x 25</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Bala de oxigeno con manómetro y vaso humidificador tipo E (Mínimo de 682 lts)</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Bala de oxigeno portátil con manómetro y vaso humidificador tipo D Mínimo de 1.5 m3</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Batas desechables</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Benzocaina gotas Frasco gotero</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Bolsa de desechos color roja</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Bolsa de desechos color verde</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Bolsa para drenaje urinario</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Bolsa plastica MD</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Bolsa plastica negra GRD</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Bolsa plastica PQ</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Bromuro de Rocuronio Ampollas</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Buretrol</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Butil bromuro de hioscina + Dipirona Ampollas</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Butil bromuro de hioscina 10 mgs Tabletas</ion-label><ion-badge slot=end>50</ion-badge></ion-item>
+      <ion-item><ion-label>Camilla principal con sistema de anclaje</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Camilla secundaria para inmovilizacion espinal y correas para asegurar el paciente</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Canuda de guedel del #1 al #5</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Canula nasal adulto</ion-label><ion-badge slot=end>6</ion-badge></ion-item>
+      <ion-item><ion-label>Canula nasal neonatal</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Canula nasal pediatrica</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Cánulas de guedel x 6 unidades Paquete</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Captopril x 50 mgs Tabletas</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Cateter endovenoso N° 14</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Cateter endovenoso N° 16</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Cateter endovenoso N° 18</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Cateter endovenoso N° 20</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Cateter endovenoso N° 22</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Cateter endovenoso N° 24</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Cateter pericraneal</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Catéter venoso no. 16</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Catéter venoso no. 18</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Catéter venoso no. 20</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Catéter venoso no. 22</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Catéter venoso no. 24</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Caucho para succion</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Chalecos reflectivos para la tripulacion</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Cinta medidora de ph CON TABLA DE LECTURA</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Citrato de Fentanilo Ampollas</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Clemastina x 2 mgs. Ampolla</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Cobijas Unidades</ion-label><ion-badge slot=end>4</ion-badge></ion-item>
+      <ion-item><ion-label>Collar de philadelphia talla L</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Collar de philadelphia talla M</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Collar philadelphia pediatrico S</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Contenedores para la clasificacion y segregacion de los residuos generados</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>DEA</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Desfibrilador Externo Automático * Unidad</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Dextrosa al 10% Bolsa x 500 ml</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Dextrosa al 10% x 500cc Bolsas</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Dextrosa al 5% Bolsa x 500 ml</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Diazepam x 10 mgs Ampollas</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Diclofenaco x 75 mgs Ampolla</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Difenilhidantoina x 250 mgs. Ampolla</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Dinitrato de isosorbide x 5 mgs Tabletas sublingual</ion-label><ion-badge slot=end>20</ion-badge></ion-item>
+      <ion-item><ion-label>Dipirona x 1 gr Ampolla</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Dispositivo Bolsa – Válvula – Máscara con reservorio para adulto (esterilizado) Unidad</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Dispositivo Bolsa – Válvula – Máscara con reservorio pediátrico (esterilizado) Unidad</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Equipo BVM adulto</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Equipo BVM neo</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Equipo BVM ped</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Equipo de macrogoteo</ion-label><ion-badge slot=end>20</ion-badge></ion-item>
+      <ion-item><ion-label>Equipo de microgoteo</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Equipo de parto</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Esparadrapo (rollo) o fixomull</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Esparadrapo adhesivo</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Esparadrapo micropore</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Equipo de pequeña CX</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Extension de 30 metros</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Extensiones de O2</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Fenobarbital x 200 mgs. Ampolla</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Fonendoscopio adulto</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Furosemida x 20 mgs Ampollas</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Gafas de proteccion industrial</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Gafas de protección</ion-label><ion-badge slot=end>4</ion-badge></ion-item>
+      <ion-item><ion-label>Galon x 5 litros agua mineral</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Gasas esteriles paquete</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Glucometro</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Guantes de manejo "caja"</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Guantes de nitrilo (par)</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Guantes desechables medianos</ion-label><ion-badge slot=end>100</ion-badge></ion-item>
+      <ion-item><ion-label>Guantes esteriles</ion-label><ion-badge slot=end>4</ion-badge></ion-item>
+      <ion-item><ion-label>Haloperidol x 5 mgs Ampollas</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Hidro Cortisona x 100 mgs Ampolla</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Hidroxicina x 50 mgs. Ampolla</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Hidróxido de aluminio Frasco Suspensión</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Hojas laringoscopio curvas y rectas adulto Unidad x cada una</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Hojas laringoscopio curvas y rectas pediátricos Unidad x cada una</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Humidificadores</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Humidificadores ventury</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Inmovilizador de extremidades</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Inmovilizadores de extremidades (cuello, miembros superiores e inferiores) Unidad x cada uno</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Inversor de corriente</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Jabon liquido de tocador x 500</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Jabon para manos</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Jeringa 1CC</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Jeringa 20CC</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Jeringa desechable x 30 cc</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Jeringas de 10CC</ion-label><ion-badge slot=end>8</ion-badge></ion-item>
+      <ion-item><ion-label>Jeringas de 5CC</ion-label><ion-badge slot=end>8</ion-badge></ion-item>
+      <ion-item><ion-label>Jeringas desechables x 10 CC</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Jeringas desechables x 5 CC</ion-label><ion-badge slot=end>30</ion-badge></ion-item>
+      <ion-item><ion-label>Ketorolaco x 30 mgs y/o Diclofenaco x75 mg Ampolla</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Kit micronebulizador adul</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Kit micronebulizador ped</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Kit venturi adulto</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Kit venturi pediatrico</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Lactato de ringer x 500 ml</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Lagrimas artificiales Frasco gotero</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Laringoscopio adulto</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Laringoscopio pediátrico</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Lidocaina al 1% sin Epinefrina Frasco ampolla x 25CC</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Lidocaina al 2% sin Epinefrina Frasco ampolla x 25CC</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Ligadura umbilical</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Linterna de examen médico</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Manillas de recien nacido</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Manta térmica</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Mantas o cobijas</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Marcador indeleble</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Mascar de no reinalacion adulto</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Mascar de no reinalacion pediatrica</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Mascara de O2 simple adulto</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Mascara de O2 simple pediatrica</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Mascara laringea varios tamaños</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Mesa pequeña para disponer elementos de superficie lavables y de fácil desinfección</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Metil Prednisolona x 250 mgs Ampolla</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Metoclopramida x 10 mgs Ampollas</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Monitor de signos vitales con minimo monitoreo de presion arterial no invasiva, brazaletes adulto y pedriatico, frecuencia cardiaca y oximetria de pulso</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Monogafas</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Morfina x 10 mgs Ampolla</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Nebulizador</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Nifedipina x 10 mgs. Tabletas</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Omeprazol x 20 mgs Capsula</ion-label><ion-badge slot=end>20</ion-badge></ion-item>
+      <ion-item><ion-label>Pañal</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Pañuelos desechables Caja</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Papel absorbente "paquete"</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Papel Higienico</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Paquete de Compresas</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Perilla de succion</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Pinza "caiman" para el cabello</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Pinzas de Magill Unidad</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Pliego de papel craft</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Ranitidina x 50 mgs Ampollas</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Riñonera</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Rotulo</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Sabanas desechables y/o tela</ion-label><ion-badge slot=end>3</ion-badge></ion-item>
+      <ion-item><ion-label>Salbutamol Inhalador</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Silla de ruedas portatil</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Sistema de oxigeno medicinal con capacidad total de almacenamiento de minimo tres (3) metros cubicos</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Sistema portatil de oxigeno de minimo 0,5 metros cubicos</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Sobre de papel</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Solución Hartman x 500 cc Bolsas</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Solucion salina al 0,9%</ion-label><ion-badge slot=end>6</ion-badge></ion-item>
+      <ion-item><ion-label>Solución Salina x 500 cc Bolsas</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Sonda Foley del #12 al #20</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Sonda ng levin del #8 al #18</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Sondas de succion del #8 al #16</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Sondas nelaton del #8 al #18</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Sulfato de Magnesio x 10 ml Ampollas</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Tabla espinal corta o chaleco de extraccion vehicular</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Tapabocas de manejo x 25</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Tapabocas N-95 x 3</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Tensiómetro adulto</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Termómetro clínico</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Tijera cortatodo</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Tijeras</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Tijeras de material</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Tijeras de trauma</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Toalla sanitaria</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Torniquete para hemorragias</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Torniquete Unidad</ion-label><ion-badge slot=end>4</ion-badge></ion-item>
+      <ion-item><ion-label>Torundas de algodón x 50 Paquetes</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Tubo endotraqueal No. 6.</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Tubo endotraqueal No. 6.0</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Tubo endotraqueal No. 7</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Tubo endotraqueal No. 7.5</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Tubo endotraqueal No. 8</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Tubo endotraqueal No. 5.0</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Tubo endotraqueal No. 5.5</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Fonendoscopio adultos</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Fonendoscopio pediatrico</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Pato hombres</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Pato mujeres</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Tensiometro adultos</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Tensiometro pediatrico</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Termometro clinico</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Lampara de mano (linterna) con baterias de repuesto</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Manta termica aluminizada</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Vaselina frasco</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Vasos desechables Plásticos</ion-label><ion-badge slot=end>25</ion-badge></ion-item>
+      <ion-item><ion-label>Venda de gasa de 50 mm</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Venda de gasa de 75 mm</ion-label><ion-badge slot=end>10</ion-badge></ion-item>
+      <ion-item><ion-label>Venda triangular de tela</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Vendaje de algodón</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Vendaje de elastico</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Vendaje de gasa</ion-label><ion-badge slot=end>5</ion-badge></ion-item>
+      <ion-item><ion-label>Vendaje triangular</ion-label><ion-badge slot=end>2</ion-badge></ion-item>
+      <ion-item><ion-label>Yodopovidona espuma</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Yodopovidona jabón Frasco</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Yodopovidona liquido</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+      <ion-item><ion-label>Yodopovidona solución Frasco</ion-label><ion-badge slot=end>1</ion-badge></ion-item>
+    </ion-list>
+  </ion-content>
   
-      <ion-content fullscreen>
-        <ion-list>
-          <ion-list-header>
-            <h1><b>Solicitudes</b></h1><br><br><br><br><br><br>
-          </ion-list-header>
-  
-          <ion-item>
-            <ion-avatar slot="start">
-              <img src="./assets/cv-salud/hospital.jpg">
-            </ion-avatar>
-            <ion-label>
-              <h2><b>#Orden 001</b></h2>
-              <h3>Usuario 1</h3>
-              <p>15 days ago</p>
-            </ion-label>
-              <ion-select interface="popover">
-                <ion-select-option value="nes">Aprobado</ion-select-option>
-                <ion-select-option value="n64">Pendiente</ion-select-option>
-                <ion-select-option value="ps">Rechazado</ion-select-option>
-              </ion-select>
-          </ion-item>
-  
-          <ion-item>
-            <ion-avatar slot="start">
-              <img src="./assets/cv-salud/eps.png">
-            </ion-avatar>
-            <ion-label>
-              <h2><b>#Orden 002</b></h2>
-              <h3>Usuario 2</h3>
-              <p>8 days ago</p>
-            </ion-label>
-            <ion-select interface="popover">
-                  <ion-select-option value="nes">Aprobado</ion-select-option>
-                  <ion-select-option value="n64">Pendiente</ion-select-option>
-                  <ion-select-option value="ps">Rechazado</ion-select-option>
-                </ion-select>
-          </ion-item>
-  
-          <ion-item>
-            <ion-avatar slot="start">
-              <img src="./assets/cv-salud/hospital.jpg">
-            </ion-avatar>
-            <ion-label>
-              <h2><b>#Orden 003</b></h2>
-              <h3>Usuario 1</h3>
-              <p>2 days ago</p>
-            </ion-label>
-            <ion-select interface="popover">
-                  <ion-select-option value="nes">Aprobado</ion-select-option>
-                  <ion-select-option value="n64">Pendiente</ion-select-option>
-                  <ion-select-option value="ps">Rechazado</ion-select-option>
-                </ion-select>
-          </ion-item>
-  
-          <ion-item>
-            <ion-avatar slot="start">
-              <img src="./assets/cv-salud/eps.png">
-            </ion-avatar>
-            <ion-label>
-              <h2><b>#Orden 004</b></h2>
-              <h3>Usuario 1</h3>
-              <p>5 hours ago</p>
-            </ion-label>
-            <ion-select interface="popover">
-                  <ion-select-option value="nes">Aprobado</ion-select-option>
-                  <ion-select-option value="n64">Pendiente</ion-select-option>
-                  <ion-select-option value="ps">Rechazado</ion-select-option>
-                </ion-select>
-          </ion-item>
-        </ion-list><br>
-        <ion-button size="block" Color="primary" routerLink="/tab4">
-          ENVIAR
-        </ion-button> 
-      </ion-content>
-</ion-app>
