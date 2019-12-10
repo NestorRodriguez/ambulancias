@@ -40,27 +40,6 @@ app.get('/', function(req, res) {
 });
 
 
-//Manejo de Rutas Select users por id
-app.route('/users/:id')
-    .get((req, res) => {
-        const id = req.params.id;
-        const sql = `SELECT * FROM users WHERE id='${id}';`;
-        const query = db.query(sql, (error, result) => {
-            try {
-                if (error) {
-                    throw error;
-                } else {
-                    console.log(result);
-                    const [data] = result;
-                    res.json(result)
-                }
-            } catch (error) {
-                res.json({ error: error.message })
-            }
-        });
-    })
-
-//Agregar Usuarios
 
 //Actualizar Usuarios
 app.route('/users/:id')
@@ -2651,6 +2630,44 @@ app.get('/Estado-Solic', (req, res) => {
  /***************************
  * tabla users   *
  ****************************/
+
+//Manejo de Rutas Select users
+app.route('/users')
+    .get((req, res) => {
+       console.log('Consultar datos ');
+       const query = db.query('select * from users', (error, result) => {
+            try {
+                if (error) {
+                    throw error;
+                } else {
+                    console.log(result);
+                    res.json(result)
+                }
+            } catch (error) {
+                res.json({ error: error.message })
+            }
+        });
+    })
+//Manejo de Rutas Select users por id
+app.route('/users/:id')
+    .get((req, res) => {
+        const id = req.params.id;
+        const sql = `SELECT * FROM users WHERE id='${id}';`;
+        const query = db.query(sql, (error, result) => {
+            try {
+               if (error) {
+                    throw error;
+                } else {
+                    console.log(result);
+                    const [data] = result;
+                    res.json(result)
+                }
+            } catch (error) {
+                res.json({ error: error.message })
+            }
+        });
+    })
+
 app.get('/users', (req, res) => {
     const sql = 'SELECT * FROM users';
     db.query(sql, (error, result) => {

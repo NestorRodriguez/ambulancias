@@ -1,43 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 <ion-content>
-  <ion-card class="welcome-card">
-    <img src="/assets/img/Logo.PNG" alt="" />
-  </ion-card>
-  <ion-card>
-    <section style="text-align: center;">
-      <h1><b>Log in</b></h1>
-    </section>
-    <ion-list lines="none">
-      <ion-item lines="none">
-        <ion-grid>
-          <ion-row>
-            <ion-col size="12">
-              <ion-item>
-                <ion-label position="stacked"><b>Usuario</b>
-                  <ion-text color="danger">*</ion-text>
+    <ion-toolbar>
+        <ion-card>
+          <ion-img class="img" src="/assets/img/Logo.PNG" slot=""></ion-img>
+        </ion-card>
+        <form (ngSubmit)="login(forma)" #forma="ngForm">
+          <ion-card>  
+          <ion-item class="loginInput01">
+                <ion-label>
+                    Usuario
                 </ion-label>
-                <ion-input required type="text"></ion-input>
-              </ion-item>
-            </ion-col><br>      
-            <ion-col size="12">
-                <ion-item>
-                    <ion-label position="stacked"><b>Contraseña</b>
-                      <ion-text color="danger">*</ion-text>
-                    </ion-label>
-                    <ion-input required type="password"></ion-input>
-                  </ion-item>
-            </ion-col>              
-          </ion-row><br>
-        </ion-grid>
-      </ion-item>
-    </ion-list>
-    <ion-button size="block" Color="primary" routerLink="/tabs/tab2">
-        Log in
-    </ion-button> 
-  </ion-card>  
+                <ion-input type="text" required ngModel #nameuser="ngModel" name="nameuser" placeholder="" maxLength="200" minLength="3"></ion-input>
+            </ion-item>
+            <ion-item class="loginInput01">
+                <ion-label>
+                    Contraseña
+                </ion-label>
+                <ion-input type="password" required ngModel #password="ngModel" name="password" placeholder="" maxLength="200" minLength="3"></ion-input>
+            </ion-item>
+            <ion-toolbar class="loginInput02">
+             </ion-toolbar>
+            <ion-toolbar>
+               <ion-button type="submit" [disabled]="!forma.valid" size="block" Color="primary">  
+              Entrar</ion-button>
+            </ion-toolbar>
+          </ion-card>
+        </form>
+    </ion-toolbar>
 </ion-content>

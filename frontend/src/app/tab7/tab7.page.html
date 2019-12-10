@@ -49,7 +49,7 @@
                                     <ion-text color="danger">*</ion-text>
                                 </ion-label><br>
                                 <ion-item>
-                                    <ion-input required type="text" oninput="handleFirstNameValue(event)">
+                                    <ion-input required type="text">
                                     </ion-input>
                                 </ion-item>
                             </ion-item>
@@ -61,7 +61,7 @@
                                     <ion-text color="danger">*</ion-text>
                                 </ion-label><br>
                                 <ion-item>
-                                <ion-input required type="number" oninput="handleFirstNameValue(event)">
+                                <ion-input required type="number"  maxLength='10' minLength="3" pattern="^[0-9]{10}$">
                                 </ion-input></ion-item>
                             </ion-item>
                         </ion-col>
