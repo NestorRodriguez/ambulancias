@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import { PacienteService } from '../services/paciente.service';
-
-import {NetworkInterface} from '@ionic-native/network-interface/ngx';
-import {Camera, CameraOptions} from '@ionic-native/camera/ngx';
-
+import { NgForm } from '@angular/forms';
+import { Registro_PacienteService } from '../Services/registro/registro.service';
 
 @Component({
   selector: 'app-tab6',
@@ -13,36 +9,26 @@ import {Camera, CameraOptions} from '@ionic-native/camera/ngx';
 })
 export class Tab6Page implements OnInit {
 
+  constructor(private service: Registro_PacienteService) { }
+
   model: any = {};
-
-  constructor(  private networkInterface: NetworkInterface,
-                private camera: Camera,
-                private getPaciente: PacienteService) {
-
-                  this.networkInterface.getWiFiIPAddress()
-                      .then(address => {
-                        this.model.ip = address.ip;
-                      })
-                      .catch(error => console.error(`Unable to get IP: ${error}`));
-              
-                  this.networkInterface.getCarrierIPAddress()
-                      .then(address => {
-                        if (!this.model.ip) {
-                          this.model.ip = address.ip;
-                        }
-                      })
-                      .catch(error => console.error(`Unable to get IP: ${error}`));
-                }
-
-                paciente: any[] = [];
-                errorMessage = '';
-
   ngOnInit() {
-    this.getPaciente.getPaciente().subscribe( paciente => {
-      this.paciente = paciente;
-      }, error => this.errorMessage = error
-      );
-        
+    this.model = {
+      nombre : null,
+      documento : null,
+      tipo_identificacion : null,
+      diagnostico : null,
+      users_id: 3
+      };
   }
-
+  public registro_paciente ( forma: NgForm ) {
+    if (forma.valid) {
+       this.service.postRegistro_Paciente('registro_paciente', this.model).subscribe( res => {
+         console.log('Respuesta', res);
+       });
+    }
+}
+public evento(evento:Event) {
+  console.log(evento);
+}
 }

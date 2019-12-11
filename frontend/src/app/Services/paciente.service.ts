@@ -6,7 +6,7 @@ import { catchError, tap, map} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class PacienteService {
+export class Registro_PacienteService {
 
   serverUrl = 'http://localhost:3000';
 
